@@ -66,13 +66,12 @@ The server exposes six read tools plus one confirmed request-creation tool:
 - `rulefoundry_read_artifact`
 - `rulefoundry_create_extraction_request`
 
-## Claude connector
+## Claude surfaces
 
-The same remote endpoint is submitted separately to Anthropic's Connectors
-Directory so it can work in Claude.ai, Claude Desktop, mobile, Cowork, and
-Claude Code without the workflow skill. The connector and this plugin share the
-same OAuth resource and server-enforced boundary; directory acceptance does not
-add session-lifecycle or artifact-mutation capability.
+The Plugin Directory submission covers Claude Code and Claude Cowork. The
+plugin uses the same OAuth resource and server-enforced boundary on both
+surfaces; directory acceptance does not add session-lifecycle or
+artifact-mutation capability.
 
 Support: [adam@rulefoundry.com](mailto:adam@rulefoundry.com)
 Privacy: <https://rulefoundry.com/privacy>
