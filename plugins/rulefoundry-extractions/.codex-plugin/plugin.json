@@ -1,0 +1,35 @@
+{
+  "name": "rulefoundry-extractions",
+  "version": "1.0.0",
+  "description": "Use finalized RuleFoundry artifacts or create a confirmed Extraction request in ChatGPT or Codex.",
+  "author": {
+    "name": "Vertex Inc.",
+    "email": "adam@rulefoundry.com",
+    "url": "https://rulefoundry.com"
+  },
+  "homepage": "https://rulefoundry.com/integrations",
+  "repository": "https://github.com/adammpolak/rulefoundry-plugins",
+  "license": "Apache-2.0",
+  "keywords": ["business-logic", "extractions", "artifacts", "planning", "mcp"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "RuleFoundry",
+    "shortDescription": "Use artifacts or request missing logic.",
+    "longDescription": "Find permitted RuleFoundry Extractions, use finalized artifacts as cited source material, or—after confirming the exact topic, optional description, and participant—create a request for yourself or an external email. RuleFoundry sends the external notification automatically; Extraction sessions still happen in RuleFoundry.",
+    "developerName": "Vertex Inc.",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://rulefoundry.com",
+    "privacyPolicyURL": "https://rulefoundry.com/privacy",
+    "termsOfServiceURL": "https://rulefoundry.com/terms",
+    "defaultPrompt": [
+      "Show the Extractions assigned to me.",
+      "Find completed Extractions I can use for this task.",
+      "Create an Extraction request for missing logic with me as the participant."
+    ],
+    "brandColor": "#1C1C1E",
+    "composerIcon": "./assets/rulefoundry-hammer-mark.svg",
+    "logo": "./assets/rulefoundry-hammer-mark.svg"
+  }
+}

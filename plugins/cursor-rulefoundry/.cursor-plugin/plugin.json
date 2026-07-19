@@ -1,0 +1,17 @@
+{
+  "name": "cursor-rulefoundry",
+  "displayName": "RuleFoundry Extractions",
+  "version": "1.0.0",
+  "description": "Use completed RuleFoundry artifacts or create a confirmed Extraction request.",
+  "author": {
+    "name": "Vertex Inc.",
+    "email": "adam@rulefoundry.com",
+    "url": "https://rulefoundry.com"
+  },
+  "homepage": "https://rulefoundry.com/integrations",
+  "repository": "https://github.com/adammpolak/rulefoundry-plugins",
+  "license": "Apache-2.0",
+  "keywords": ["rulefoundry", "mcp", "business-logic", "extractions", "artifacts"],
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json"
+}

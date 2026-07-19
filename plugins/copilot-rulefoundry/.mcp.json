@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "rulefoundry": {
+      "type": "http",
+      "url": "https://app-api.rulefoundry.com/mcp/plugins",
+      "tools": [
+        "rulefoundry_list_workspaces",
+        "rulefoundry_list_extractions",
+        "rulefoundry_get_extraction",
+        "rulefoundry_search_extractions",
+        "rulefoundry_list_artifacts",
+        "rulefoundry_read_artifact",
+        "rulefoundry_create_extraction_request"
+      ],
+      "timeout": 75000
+    }
+  }
+}

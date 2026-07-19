@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.adammpolak/rulefoundry-extractions",
+  "title": "RuleFoundry Extractions",
+  "description": "Read completed RuleFoundry Extraction artifacts or create a confirmed Extraction request.",
+  "repository": {
+    "url": "https://github.com/adammpolak/rulefoundry-plugins",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://app-api.rulefoundry.com/mcp/plugins"
+    }
+  ]
+}

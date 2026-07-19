@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "rulefoundry": {
+      "type": "http",
+      "url": "https://app-api.rulefoundry.com/mcp/plugins",
+      "timeout": 75000
+    }
+  }
+}

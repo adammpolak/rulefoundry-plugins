@@ -1,0 +1,25 @@
+{
+  "name": "rulefoundry",
+  "description": "Official RuleFoundry plugins for using completed business-logic Extractions in AI assistants.",
+  "owner": {
+    "name": "Vertex Inc.",
+    "email": "adam@rulefoundry.com"
+  },
+  "plugins": [
+    {
+      "name": "claude-rulefoundry",
+      "source": "./plugins/claude-rulefoundry",
+      "description": "Use completed RuleFoundry artifacts or create a confirmed Extraction request.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Vertex Inc.",
+        "email": "adam@rulefoundry.com"
+      },
+      "homepage": "https://rulefoundry.com/integrations",
+      "repository": "https://github.com/adammpolak/rulefoundry-plugins",
+      "license": "Apache-2.0",
+      "category": "Productivity",
+      "tags": ["business-logic", "extractions", "mcp"]
+    }
+  ]
+}

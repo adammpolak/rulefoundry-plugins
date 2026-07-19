@@ -1,0 +1,20 @@
+{
+  "name": "rulefoundry",
+  "interface": {
+    "displayName": "RuleFoundry"
+  },
+  "plugins": [
+    {
+      "name": "rulefoundry-extractions",
+      "source": {
+        "source": "local",
+        "path": "./plugins/rulefoundry-extractions"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

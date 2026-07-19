@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "rulefoundry": {
+      "type": "http",
+      "url": "https://app-api.rulefoundry.com/mcp/plugins"
+    }
+  }
+}
