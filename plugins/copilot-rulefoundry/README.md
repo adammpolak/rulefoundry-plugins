@@ -1,5 +1,9 @@
 # RuleFoundry Extractions for GitHub Copilot
 
+Marketplace status: **prepared, not submitted**. Direct GitHub installation is
+available for testing, but RuleFoundry is not listed in the default
+`awesome-copilot` marketplace.
+
 This is a current-format GitHub Copilot plugin for browsing RuleFoundry
 Extractions and using completed, engine-produced artifacts as cited source
 material. It is not a legacy GitHub Copilot Extension or GitHub Marketplace App.

@@ -1,5 +1,9 @@
 # RuleFoundry Extractions for Claude
 
+Marketplace status: **prepared, not submitted**. Direct GitHub installation is
+available for testing, but RuleFoundry is not listed in Anthropic's Plugin
+Directory or Connectors Directory.
+
 This public Apache-2.0 package connects
 Claude Code to RuleFoundry's production Streamable HTTP MCP plugin resource:
 

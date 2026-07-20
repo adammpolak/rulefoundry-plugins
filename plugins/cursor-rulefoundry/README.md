@@ -4,6 +4,10 @@ This Cursor plugin connects to RuleFoundry's OAuth-protected public MCP resource
 
 `https://app-api.rulefoundry.com/mcp/plugins`
 
+Marketplace status: **prepared, not submitted**. There is no public Cursor
+Marketplace listing or install link yet. Local loading below is a test path,
+not marketplace availability.
+
 It can find permitted workspaces and owned or assigned Extractions, return an
 in-app URL for unfinished work, read completed engine-produced artifacts, and
 create a new Extraction request after the user confirms the exact topic,
@@ -27,8 +31,10 @@ the bundled MCP server. The requested scopes are limited to
 `workspaces:read`, `extractions:read`, `extractions:write`, and
 `artifacts:read`.
 
-After Cursor Marketplace review, install the public listing from
-<https://cursor.com/marketplace>.
+After Cursor accepts and publishes the plugin, this README and the repository
+[marketplace status](../../MARKETPLACE_STATUS.md) will link directly to the
+official RuleFoundry install page. The generic Cursor Marketplace home page is
+not an install link.
 
 Support: [adam@rulefoundry.com](mailto:adam@rulefoundry.com)
 
