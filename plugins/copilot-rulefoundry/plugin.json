@@ -1,6 +1,6 @@
 {
   "name": "rulefoundry-extractions",
-  "description": "Business logic for the agentic enterprise.",
+  "description": "Extract business logic",
   "version": "1.0.0",
   "author": {
     "name": "Vertex Inc.",

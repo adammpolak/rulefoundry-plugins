@@ -5,7 +5,7 @@
     "email": "adam@rulefoundry.com"
   },
   "metadata": {
-    "description": "Business logic for the agentic enterprise.",
+    "description": "Extract business logic",
     "version": "1.0.0",
     "pluginRoot": "plugins"
   },
@@ -13,7 +13,7 @@
     {
       "name": "cursor-rulefoundry",
       "source": "cursor-rulefoundry",
-      "description": "Business logic for the agentic enterprise."
+      "description": "Extract business logic"
     }
   ]
 }
