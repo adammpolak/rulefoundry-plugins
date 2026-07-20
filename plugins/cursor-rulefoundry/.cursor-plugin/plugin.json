@@ -2,7 +2,7 @@
   "name": "cursor-rulefoundry",
   "displayName": "RuleFoundry Extractions",
   "version": "1.0.0",
-  "description": "Business logic for the agentic enterprise.",
+  "description": "Extract business logic",
   "author": {
     "name": "Vertex Inc.",
     "email": "adam@rulefoundry.com",

@@ -1,6 +1,6 @@
 {
   "name": "rulefoundry",
-  "description": "Business logic for the agentic enterprise.",
+  "description": "Extract business logic",
   "owner": {
     "name": "Vertex Inc.",
     "email": "adam@rulefoundry.com"
@@ -9,7 +9,7 @@
     {
       "name": "claude-rulefoundry",
       "source": "./plugins/claude-rulefoundry",
-      "description": "Business logic for the agentic enterprise.",
+      "description": "Extract business logic",
       "version": "1.0.0",
       "author": {
         "name": "Vertex Inc.",
