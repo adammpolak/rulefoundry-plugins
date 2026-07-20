@@ -4,9 +4,9 @@ This Cursor plugin connects to RuleFoundry's OAuth-protected public MCP resource
 
 `https://app-api.rulefoundry.com/mcp/plugins`
 
-Marketplace status: **prepared, not submitted**. There is no public Cursor
-Marketplace listing or install link yet. Local loading below is a test path,
-not marketplace availability.
+Marketplace status: **submitted 2026-07-20; Cursor review pending**. There is
+no public Cursor Marketplace listing or install link yet. Local loading below
+is a test path, not marketplace availability.
 
 It can find permitted workspaces and owned or assigned Extractions, return an
 in-app URL for unfinished work, read completed engine-produced artifacts, and
