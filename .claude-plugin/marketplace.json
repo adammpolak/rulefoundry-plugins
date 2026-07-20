@@ -1,6 +1,6 @@
 {
   "name": "rulefoundry",
-  "description": "Official RuleFoundry plugins for using completed business-logic Extractions in AI assistants.",
+  "description": "Business logic for the agentic enterprise.",
   "owner": {
     "name": "Vertex Inc.",
     "email": "adam@rulefoundry.com"
@@ -9,7 +9,7 @@
     {
       "name": "claude-rulefoundry",
       "source": "./plugins/claude-rulefoundry",
-      "description": "Use completed RuleFoundry artifacts or create a confirmed Extraction request.",
+      "description": "Business logic for the agentic enterprise.",
       "version": "1.0.0",
       "author": {
         "name": "Vertex Inc.",

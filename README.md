@@ -18,17 +18,21 @@ Extraction or artifact. External participant email is sent automatically by
 RuleFoundry as part of the single confirmed create action; it is not a separate
 plugin capability.
 
-> **Marketplace status:** no package has been submitted, accepted, or verified
-> live in a public vendor marketplace. Direct and local test installs below are
-> not marketplace listings. See [MARKETPLACE_STATUS.md](MARKETPLACE_STATUS.md).
+> **Marketplace status:** ChatGPT and GitHub Copilot are submitted and awaiting
+> review. The Copilot review is tracked in
+> [issue #2353](https://github.com/github/awesome-copilot/issues/2353).
+> Cursor and Claude have not been submitted. No package has been accepted or
+> verified live in a public vendor marketplace. Direct and local test installs
+> below are not marketplace listings. See
+> [MARKETPLACE_STATUS.md](MARKETPLACE_STATUS.md).
 
 ## Packages
 
 | Product | Package | Direct/source availability | Vendor marketplace |
 | --- | --- | --- | --- |
-| Codex; future ChatGPT directory listing | [`rulefoundry-extractions`](plugins/rulefoundry-extractions) | Codex: `codex plugin marketplace add adammpolak/rulefoundry-plugins`, then `codex plugin add rulefoundry-extractions@rulefoundry` | Draft at OpenAI Testing; not submitted; no public install link |
+| Codex; future ChatGPT directory listing | [`rulefoundry-extractions`](plugins/rulefoundry-extractions) | Codex: `codex plugin marketplace add adammpolak/rulefoundry-plugins`, then `codex plugin add rulefoundry-extractions@rulefoundry` | Submitted 2026-07-20; OpenAI version 1.0.0 in Review; no public install link |
 | Claude Code and Cowork | [`claude-rulefoundry`](plugins/claude-rulefoundry) | `/plugin marketplace add adammpolak/rulefoundry-plugins`, then `/plugin install claude-rulefoundry@rulefoundry` | Prepared; not submitted; no public install link |
-| GitHub Copilot CLI and IDE | [`copilot-rulefoundry`](plugins/copilot-rulefoundry) | `copilot plugin install adammpolak/rulefoundry-plugins:plugins/copilot-rulefoundry` | Prepared; not submitted; no public install link |
+| GitHub Copilot CLI and IDE | [`copilot-rulefoundry`](plugins/copilot-rulefoundry) | `copilot plugin install adammpolak/rulefoundry-plugins:plugins/copilot-rulefoundry` | [Submitted; awaiting review](https://github.com/github/awesome-copilot/issues/2353); no public marketplace install link |
 | Cursor | [`cursor-rulefoundry`](plugins/cursor-rulefoundry) | Load this package locally for testing | Prepared; not submitted; no public install link |
 
 Each client opens the RuleFoundry OAuth flow when authentication is needed. The
