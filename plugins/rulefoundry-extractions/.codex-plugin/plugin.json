@@ -1,7 +1,7 @@
 {
   "name": "rulefoundry-extractions",
   "version": "1.0.0",
-  "description": "Use finalized RuleFoundry artifacts or create a confirmed Extraction request in ChatGPT or Codex.",
+  "description": "Business logic for the agentic enterprise.",
   "author": {
     "name": "Vertex Inc.",
     "email": "adam@rulefoundry.com",
@@ -15,7 +15,7 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "RuleFoundry",
-    "shortDescription": "Use artifacts or request missing logic.",
+    "shortDescription": "Business logic for the agentic enterprise.",
     "longDescription": "Find permitted RuleFoundry Extractions, use finalized artifacts as cited source material, or—after confirming the exact topic, optional description, and participant—create a request for yourself or an external email. RuleFoundry sends the external notification automatically; Extraction sessions still happen in RuleFoundry.",
     "developerName": "Vertex Inc.",
     "category": "Productivity",
