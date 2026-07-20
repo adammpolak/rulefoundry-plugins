@@ -2,16 +2,18 @@
 
 Last verified: **2026-07-20**
 
-No RuleFoundry plugin has been submitted to, accepted by, or verified live in a
-public vendor marketplace yet. The public, tagged source packages in this
-repository are available for the direct or local test paths described below;
-that availability is not a marketplace listing.
+The GitHub Copilot plugin was submitted on **2026-07-19** and is awaiting
+review. Cursor, Claude, and ChatGPT have not been submitted. No RuleFoundry
+plugin has been accepted by or verified live in a public vendor marketplace.
+The public, tagged source packages in this repository are available for the
+direct or local test paths described below; that availability is not a
+marketplace listing.
 
 | Surface | Source/test availability | Submission state | Public listing | Install link |
 | --- | --- | --- | --- | --- |
 | ChatGPT and Codex Plugins Directory | Codex can install the tagged GitHub package directly; the OpenAI portal draft is saved through the Testing step | Draft; not submitted | Not available | None |
 | Claude Plugin Directory and Connectors Directory | Claude Code can install the tagged GitHub package directly | Prepared; not submitted | Not available | None |
-| GitHub Copilot `awesome-copilot` marketplace | Copilot CLI can install the tagged GitHub subdirectory directly | Prepared; not submitted | Not available | None |
+| GitHub Copilot `awesome-copilot` marketplace | Copilot CLI can install the tagged GitHub subdirectory directly | [Submitted 2026-07-19; awaiting review](https://github.com/github/awesome-copilot/issues/2353) | Not available | None |
 | Cursor Marketplace | The Cursor package can be loaded locally for testing | Prepared; not submitted | Not available | None |
 
 ## Evidence rules
@@ -30,7 +32,7 @@ that availability is not a marketplace listing.
 
 - [Cursor Marketplace](https://cursor.com/marketplace): no RuleFoundry listing.
 - [Anthropic `claude-plugins-official`](https://github.com/anthropics/claude-plugins-official): no RuleFoundry entry.
-- [GitHub `awesome-copilot`](https://github.com/github/awesome-copilot): no RuleFoundry entry.
+- [GitHub `awesome-copilot` review #2353](https://github.com/github/awesome-copilot/issues/2353): open and labeled `awaiting-review`; no accepted RuleFoundry listing yet.
 - OpenAI: the RuleFoundry draft remains on the portal Testing step and has not
   been submitted to the ChatGPT and Codex Plugins Directory.
 
