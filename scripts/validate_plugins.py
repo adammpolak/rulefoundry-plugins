@@ -40,13 +40,14 @@ def main() -> None:
     copilot = load("plugins/copilot-rulefoundry/plugin.json")
     copilot_mcp = load("plugins/copilot-rulefoundry/.mcp.json")
     registry = load("plugins/copilot-rulefoundry/server.json")
+    community = load("plugins/expert-logic-to-code/plugin.json")
     cursor = load("plugins/cursor-rulefoundry/.cursor-plugin/plugin.json")
     cursor_mcp = load("plugins/cursor-rulefoundry/mcp.json")
     codex_marketplace = load(".agents/plugins/marketplace.json")
     claude_marketplace = load(".claude-plugin/marketplace.json")
     cursor_marketplace = load(".cursor-plugin/marketplace.json")
 
-    manifests = (codex, claude, copilot, cursor)
+    manifests = (codex, claude, copilot, community, cursor)
     for manifest in manifests:
         require(manifest.get("version") == VERSION, "all plugin versions must match the release")
         require(manifest.get("license") == LICENSE, "all plugins must use Apache-2.0")
@@ -62,6 +63,42 @@ def main() -> None:
     require(
         set(copilot_mcp["mcpServers"]["rulefoundry"]["tools"]) == TOOLS,
         "Copilot must allowlist exactly the seven public tools",
+    )
+    require(
+        community["name"] == "expert-logic-to-code",
+        "community Copilot plugin name is incorrect",
+    )
+    require(
+        community.get("category") == "developer-tools",
+        "community Copilot plugin must use the developer-tools category",
+    )
+    require(
+        community.get("skills") == "skills/",
+        "community Copilot plugin must expose its local skill",
+    )
+    require(
+        "mcpServers" not in community
+        and "homepage" not in community
+        and set(community["author"]) == {"name"},
+        "community Copilot plugin must not require or promote a remote service",
+    )
+    community_skill = (
+        ROOT
+        / "plugins/expert-logic-to-code/skills/expert-logic-to-code/SKILL.md"
+    ).read_text(encoding="utf-8")
+    for phrase in (
+        "stable IDs",
+        "Never silently choose business behavior",
+        "needs-review",
+        "sign up, purchase, or leave Copilot",
+    ):
+        require(
+            phrase.lower() in community_skill.lower(),
+            f"community Copilot skill is missing {phrase}",
+        )
+    require(
+        "https://rulefoundry.com" not in community_skill,
+        "community Copilot skill must not contain promotional RuleFoundry links",
     )
     require(registry["version"] == VERSION, "MCP Registry version must match the release")
     require(

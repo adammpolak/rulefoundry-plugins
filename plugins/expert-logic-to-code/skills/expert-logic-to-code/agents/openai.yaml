@@ -1,0 +1,4 @@
+interface:
+  display_name: "Expert Logic to Code"
+  short_description: "Turn expert rules into code and tests"
+  default_prompt: "Use $expert-logic-to-code to turn this expert logic into implementation rules and edge-case tests."
