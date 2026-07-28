@@ -1,9 +1,9 @@
 # RuleFoundry Extractions for GitHub Copilot
 
-Marketplace status: **submitted 2026-07-19; awaiting review** in
+Marketplace status: **rejected 2026-07-28** in
 [`awesome-copilot` issue #2353](https://github.com/github/awesome-copilot/issues/2353).
-Direct GitHub installation is available for testing, but RuleFoundry is not yet
-listed in the default `awesome-copilot` marketplace.
+The issue is closed and there is no default-marketplace listing. Direct GitHub
+installation remains available separately.
 
 This is a current-format GitHub Copilot plugin for browsing RuleFoundry
 Extractions and using completed, engine-produced artifacts as cited source
@@ -38,7 +38,8 @@ For a direct install after the repository is public:
 copilot plugin install adammpolak/rulefoundry-plugins:plugins/copilot-rulefoundry
 ```
 
-After the plugin is accepted into the default `awesome-copilot` marketplace:
+Only if a revised submission is later accepted into the default
+`awesome-copilot` marketplace:
 
 ```text
 copilot plugin install rulefoundry-extractions@awesome-copilot
