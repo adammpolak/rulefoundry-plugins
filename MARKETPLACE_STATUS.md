@@ -9,10 +9,11 @@ the public RuleFoundry directory page now exposes an `Install plugin` action.
 Cursor confirmed on **2026-07-21** that the incorrectly attributed application
 would be withdrawn. A corrected submission was created on **2026-07-28** and
 is now published with a public `Add to Cursor` action; directory verification
-is not yet claimed. Claude remains under review. GitHub Copilot intake passed
-on **2026-07-28**, but an `awesome-copilot` maintainer then rejected and closed
-the submission because it was viewed as centered on funneling users into a paid
-service. OpenAI and Cursor now have verified public directory install paths.
+is not yet claimed. Claude remains under review. The original service-backed
+GitHub Copilot submission was rejected on **2026-07-28**. It was replaced in
+the same issue by a separate free, offline `expert-logic-to-code` community
+plugin; intake passed and the issue is now open and `ready-for-review`. OpenAI
+and Cursor now have verified public directory install paths.
 The public, tagged source packages in this repository are available for the
 direct or local test paths described below; that availability is not a
 marketplace listing.
@@ -21,7 +22,7 @@ marketplace listing.
 | --- | --- | --- | --- | --- |
 | ChatGPT and Codex Plugins Directory | Codex can install the tagged GitHub package directly | Submitted 2026-07-20; approved 2026-07-21; now published | Available | [Install RuleFoundry](https://chatgpt.com/plugins/plugin_asdk_app_6a5cc3a722c08191a8d64f1ef30047d5) |
 | Claude community marketplace | Claude Code can install the tagged GitHub package directly | Anthropic Console lists two RuleFoundry submissions, both `Submitted and pending review` | Not available | None |
-| GitHub Copilot `awesome-copilot` marketplace | Copilot CLI can install the tagged GitHub subdirectory directly | [Rejected and closed 2026-07-28](https://github.com/github/awesome-copilot/issues/2353#issuecomment-5100469318) after intake passed | Not available | None |
+| GitHub Copilot `awesome-copilot` marketplace | Connected RuleFoundry package remains a direct install; offline community plugin has an immutable public tag | [Community plugin intake passed; ready for maintainer review](https://github.com/github/awesome-copilot/issues/2353) | Not available | None |
 | Cursor Directory | The Cursor package can be loaded locally or inspected in the public source repository | Published 2026-07-28; directory verification is not yet claimed | Available | [Install RuleFoundry](https://cursor.directory/plugins/rulefoundry) |
 
 ## Evidence rules
@@ -50,9 +51,11 @@ marketplace listing.
   no RuleFoundry entry; the signed-in Console lists two RuleFoundry submissions
   and marks both `Submitted and pending review`.
 - [GitHub `awesome-copilot` review #2353](https://github.com/github/awesome-copilot/issues/2353):
-  intake passed on 2026-07-28, then a maintainer rejected the plugin as
-  centered on funneling users into a paid service. The issue is closed and
-  labeled `rejected`; no generated PR or accepted RuleFoundry listing exists.
+  the original service-backed plugin was rejected as centered on funneling
+  users into a paid service. The issue was updated to the free offline
+  `expert-logic-to-code` package at immutable tag
+  `expert-logic-to-code-v1.0.0`; intake passed, and the reopened issue is
+  `ready-for-review`. No generated marketplace PR or public install path exists.
 - OpenAI: the signed-in portal shows RuleFoundry 1.0.0 as `Published`. The
   [public directory page](https://chatgpt.com/plugins/plugin_asdk_app_6a5cc3a722c08191a8d64f1ef30047d5)
   loads as `ChatGPT - RuleFoundry` and exposes `Install plugin`.

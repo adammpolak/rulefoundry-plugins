@@ -1,9 +1,11 @@
 # RuleFoundry Extractions for GitHub Copilot
 
-Marketplace status: **rejected 2026-07-28** in
-[`awesome-copilot` issue #2353](https://github.com/github/awesome-copilot/issues/2353).
-The issue is closed and there is no default-marketplace listing. Direct GitHub
-installation remains available separately.
+Marketplace status: this connected package remains a direct GitHub install. The
+original marketplace submission was rejected, then the same
+[`awesome-copilot` issue #2353](https://github.com/github/awesome-copilot/issues/2353)
+was updated to a separate free, offline `expert-logic-to-code` community
+plugin. Its intake passed and it is ready for maintainer review. Neither
+package has a public default-marketplace install path yet.
 
 This is a current-format GitHub Copilot plugin for browsing RuleFoundry
 Extractions and using completed, engine-produced artifacts as cited source
