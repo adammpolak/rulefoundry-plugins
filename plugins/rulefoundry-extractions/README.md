@@ -4,9 +4,10 @@ RuleFoundry Extractions is the public RuleFoundry plugin for ChatGPT and Codex. 
 
 `https://app-api.rulefoundry.com/mcp/plugins`
 
-Marketplace status: **submitted 2026-07-20; OpenAI version 1.0.0 is in
-Review**. The direct installation below is for Codex and is not a public
-ChatGPT directory listing.
+Marketplace status: **OpenAI version 1.0.0 is published and publicly
+installable** from the [ChatGPT and Codex Plugins
+Directory](https://chatgpt.com/plugins/plugin_asdk_app_6a5cc3a722c08191a8d64f1ef30047d5).
+The direct installation below remains a separate Codex source-install path.
 
 The plugin can list permitted Extractions, return the RuleFoundry app URL for unfinished sessions, read finalized artifacts, and create one self or external-participant request after immediate confirmation of its exact topic, description, and participant. External participant notification is automatic during creation. A fresh opaque idempotency key makes exact retries safe, while app-equivalent input limits and external-request throttles prevent duplicate or abusive sends. Creating a request does not consume quota. The plugin cannot resend, begin, conduct, resume, complete, modify, or delete a session or artifact.
 
@@ -31,10 +32,10 @@ python3 ~/.codex/skills/.system/plugin-creator/scripts/validate_plugin.py plugin
 
 For an authenticated client smoke test, install the package, complete RuleFoundry OAuth, and start a fresh chat. Useful prompts:
 
-- `Show the Extractions assigned to me.`
-- `Find completed Extractions about approval rules.`
-- `List and read the finalized artifacts for the selected Extraction.`
-- `Create an Extraction request about approval precedence for me.` (must confirm exact topic, description, and self participant immediately before creation)
+- `Get the test-data generation logic from Dan and turn it into edge-case fixtures for this repo.`
+- `Use April's reasoning logic to build a classification skill for our MCP server.`
+- `Use Maya's pricing approval rules to write implementation logic and acceptance tests.`
+- `Ask Priya to capture the enterprise-renewal exception rules we need before automating the workflow.` (must confirm the exact topic, description, and participant immediately before creation)
 - `Continue this unfinished Extraction.` (must return the RuleFoundry app URL and explain the boundary)
 
 ## ChatGPT publication
