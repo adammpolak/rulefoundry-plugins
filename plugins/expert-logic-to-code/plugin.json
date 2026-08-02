@@ -1,0 +1,19 @@
+{
+  "name": "expert-logic-to-code",
+  "description": "Turn expert decision logic into traceable code, edge-case tests, classification skills, and acceptance criteria.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Vertex Inc."
+  },
+  "repository": "https://github.com/adammpolak/rulefoundry-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "business-logic",
+    "classification",
+    "decision-rules",
+    "requirements",
+    "testing"
+  ],
+  "category": "developer-tools",
+  "skills": "skills/"
+}
