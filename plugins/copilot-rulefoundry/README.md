@@ -36,7 +36,9 @@ copilot mcp get rulefoundry
 ```
 
 For a direct install on macOS, Linux, or Windows, use Copilot CLI's native
-GitHub-subdirectory installer:
+GitHub-subdirectory installer. Install
+[Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli)
+first if the `copilot` command is not already available:
 
 ```text
 copilot plugin install adammpolak/rulefoundry-plugins:plugins/copilot-rulefoundry

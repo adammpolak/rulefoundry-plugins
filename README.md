@@ -66,7 +66,9 @@ Unblock-File .\install-cursor.ps1
 ```
 
 GitHub Copilot CLI has a native cross-platform repository installer, so no
-wrapper script is needed:
+wrapper script is needed. If `copilot` is not installed yet, use GitHub's
+[official Copilot CLI installation options](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli)
+first:
 
 ```text
 copilot plugin install adammpolak/rulefoundry-plugins:plugins/copilot-rulefoundry
