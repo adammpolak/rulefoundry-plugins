@@ -1,11 +1,12 @@
 # RuleFoundry Extractions for Claude
 
 Marketplace status: **submitted 2026-07-20; Anthropic review pending**. Direct
-GitHub installation is available for testing, but RuleFoundry is not yet listed
-in Anthropic's community marketplace.
+GitHub installation is available now, but RuleFoundry is not yet listed in
+Anthropic's public plugin directory.
 
 This public Apache-2.0 package connects
-Claude Code to RuleFoundry's production Streamable HTTP MCP plugin resource:
+Claude Code and Cowork to RuleFoundry's production Streamable HTTP MCP plugin
+resource:
 
 `https://app-api.rulefoundry.com/mcp/plugins`
 
@@ -18,6 +19,40 @@ single create action, and request creation does not consume quota. The Extractio
 session itself remains in the RuleFoundry app. Exact retries reuse an opaque
 idempotency key and cannot send a second email; app-equivalent input bounds and
 per-user/recipient throttles apply.
+
+## Install on Claude Code and Cowork
+
+Claude Code supports macOS, Linux, and Windows. Install it with Anthropic's
+recommended platform package if `claude` is not already available.
+
+macOS or Linux:
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+Windows PowerShell:
+
+```powershell
+winget install Anthropic.ClaudeCode
+```
+
+Start Claude Code with `claude`, then run:
+
+```text
+/plugin marketplace add https://github.com/adammpolak/rulefoundry-plugins.git#v1.0.0
+/plugin install claude-rulefoundry@rulefoundry
+/reload-plugins
+```
+
+For Claude Cowork, open **Customize -> Plugins -> Add marketplace**, enter
+`adammpolak/rulefoundry-plugins`, and install `claude-rulefoundry`. Cowork
+prompts for RuleFoundry authentication when it enables the bundled connector.
+
+These direct paths are separate from Anthropic's public directory review.
+See Anthropic's official [Claude Code setup](https://code.claude.com/docs/en/getting-started),
+[plugin marketplace](https://code.claude.com/docs/en/discover-plugins), and
+[Cowork plugin](https://claude.com/docs/cowork/guide/plugins) documentation.
 
 ## Test locally
 
@@ -34,19 +69,11 @@ four plugin scopes: `workspaces:read`, `extractions:read`, `extractions:write`,
 and `artifacts:read`. Then run `/reload-plugins` or start a fresh session if the MCP
 server was enabled after startup.
 
-For direct installation, add this GitHub repository as a marketplace and install
-the plugin:
-
-```text
-/plugin marketplace add adammpolak/rulefoundry-plugins@v1.0.0
-/plugin install claude-rulefoundry@rulefoundry
-```
-
 After Anthropic accepts the submission into the community marketplace, users
 can instead install it with:
 
 ```text
-/plugin install claude-rulefoundry@claude-community
+/plugin install claude-rulefoundry@claude-plugins-official
 ```
 
 No bearer token, OAuth client secret, or reviewer credential belongs in the

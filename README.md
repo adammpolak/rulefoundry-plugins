@@ -41,7 +41,7 @@ plugin capability.
 | GitHub Copilot CLI and IDE | [`copilot-rulefoundry`](plugins/copilot-rulefoundry) | `copilot plugin install adammpolak/rulefoundry-plugins:plugins/copilot-rulefoundry` | Separate offline community plugin [submission closed without approval](https://github.com/github/awesome-copilot/issues/2353); no public marketplace install link |
 | Cursor | [`cursor-rulefoundry`](plugins/cursor-rulefoundry) | Use the Bash or PowerShell installer below for a local source install | [Published and available from Cursor Directory](https://cursor.directory/plugins/rulefoundry); directory verification is not yet claimed |
 
-## Quick install for Cursor and GitHub Copilot
+## Quick install for Cursor, Claude, and GitHub Copilot
 
 Cursor users should normally use the public
 [Cursor Directory listing](https://cursor.directory/plugins/rulefoundry). If
@@ -64,6 +64,34 @@ Invoke-WebRequest https://raw.githubusercontent.com/adammpolak/rulefoundry-plugi
 Unblock-File .\install-cursor.ps1
 .\install-cursor.ps1
 ```
+
+Claude Code supports macOS, Linux, and Windows. Install it with Anthropic's
+recommended platform package, then add the pinned RuleFoundry marketplace from
+inside a Claude Code session.
+
+macOS or Linux:
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+Windows PowerShell:
+
+```powershell
+winget install Anthropic.ClaudeCode
+```
+
+All platforms, after running `claude`:
+
+```text
+/plugin marketplace add https://github.com/adammpolak/rulefoundry-plugins.git#v1.0.0
+/plugin install claude-rulefoundry@rulefoundry
+/reload-plugins
+```
+
+For Claude Cowork, open **Customize -> Plugins -> Add marketplace**, enter
+`adammpolak/rulefoundry-plugins`, and install `claude-rulefoundry`. The direct
+marketplace works now; Anthropic's public directory review remains pending.
 
 GitHub Copilot CLI has a native cross-platform repository installer, so no
 wrapper script is needed. If `copilot` is not installed yet, use GitHub's
