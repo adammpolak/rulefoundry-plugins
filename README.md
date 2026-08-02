@@ -39,7 +39,45 @@ plugin capability.
 | ChatGPT and Codex | [`rulefoundry-extractions`](plugins/rulefoundry-extractions) | Codex: `codex plugin marketplace add adammpolak/rulefoundry-plugins`, then `codex plugin add rulefoundry-extractions@rulefoundry` | [ChatGPT published and available](https://chatgpt.com/plugins/plugin_asdk_app_6a5cc3a722c08191a8d64f1ef30047d5); Codex remains a separate direct source install |
 | Claude Code and Cowork | [`claude-rulefoundry`](plugins/claude-rulefoundry) | `/plugin marketplace add adammpolak/rulefoundry-plugins`, then `/plugin install claude-rulefoundry@rulefoundry` | Submitted 2026-07-20; Anthropic review pending; no public install link |
 | GitHub Copilot CLI and IDE | [`copilot-rulefoundry`](plugins/copilot-rulefoundry) | `copilot plugin install adammpolak/rulefoundry-plugins:plugins/copilot-rulefoundry` | Separate offline community plugin [submission closed without approval](https://github.com/github/awesome-copilot/issues/2353); no public marketplace install link |
-| Cursor | [`cursor-rulefoundry`](plugins/cursor-rulefoundry) | Load this package locally or inspect the public source | [Published and available from Cursor Directory](https://cursor.directory/plugins/rulefoundry); directory verification is not yet claimed |
+| Cursor | [`cursor-rulefoundry`](plugins/cursor-rulefoundry) | Use the Bash or PowerShell installer below for a local source install | [Published and available from Cursor Directory](https://cursor.directory/plugins/rulefoundry); directory verification is not yet claimed |
+
+## Quick install for Cursor and GitHub Copilot
+
+Cursor users should normally use the public
+[Cursor Directory listing](https://cursor.directory/plugins/rulefoundry). If
+that route is unavailable, download and inspect the platform installer before
+running it. Both installers fetch the immutable `v1.0.0` package, install it at
+Cursor's supported local-plugin path, and retain the previous install as a
+timestamped backup.
+
+macOS or Linux:
+
+```bash
+curl -fsSLO https://raw.githubusercontent.com/adammpolak/rulefoundry-plugins/main/scripts/install-cursor.sh
+bash install-cursor.sh
+```
+
+Windows PowerShell:
+
+```powershell
+Invoke-WebRequest https://raw.githubusercontent.com/adammpolak/rulefoundry-plugins/main/scripts/install-cursor.ps1 -OutFile install-cursor.ps1
+Unblock-File .\install-cursor.ps1
+.\install-cursor.ps1
+```
+
+GitHub Copilot CLI has a native cross-platform repository installer, so no
+wrapper script is needed:
+
+```text
+copilot plugin install adammpolak/rulefoundry-plugins:plugins/copilot-rulefoundry
+copilot plugin list
+```
+
+The separate free, offline workflow package can be installed with:
+
+```text
+copilot plugin install adammpolak/rulefoundry-plugins:plugins/expert-logic-to-code
+```
 
 Each client opens the RuleFoundry OAuth flow when authentication is needed. The
 requested scopes are limited to `workspaces:read`, `extractions:read`,

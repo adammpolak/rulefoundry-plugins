@@ -35,10 +35,12 @@ copilot plugin list
 copilot mcp get rulefoundry
 ```
 
-For a direct install after the repository is public:
+For a direct install on macOS, Linux, or Windows, use Copilot CLI's native
+GitHub-subdirectory installer:
 
 ```text
 copilot plugin install adammpolak/rulefoundry-plugins:plugins/copilot-rulefoundry
+copilot plugin list
 ```
 
 Only if a revised submission is later accepted into the default
