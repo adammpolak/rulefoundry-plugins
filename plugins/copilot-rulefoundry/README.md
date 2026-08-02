@@ -1,9 +1,12 @@
 # RuleFoundry Extractions for GitHub Copilot
 
-Marketplace status: **submitted 2026-07-19; awaiting review** in
-[`awesome-copilot` issue #2353](https://github.com/github/awesome-copilot/issues/2353).
-Direct GitHub installation is available for testing, but RuleFoundry is not yet
-listed in the default `awesome-copilot` marketplace.
+Marketplace status: this connected package remains a direct GitHub install. The
+original marketplace submission was rejected, then the same
+[`awesome-copilot` issue #2353](https://github.com/github/awesome-copilot/issues/2353)
+was updated to a separate free, offline `expert-logic-to-code` community
+plugin. Its intake passed and the issue reopened, but a maintainer then closed
+it without `/approve`, an `approved` label, or a generated marketplace PR.
+Neither package has a public default-marketplace install path.
 
 This is a current-format GitHub Copilot plugin for browsing RuleFoundry
 Extractions and using completed, engine-produced artifacts as cited source
@@ -32,13 +35,18 @@ copilot plugin list
 copilot mcp get rulefoundry
 ```
 
-For a direct install after the repository is public:
+For a direct install on macOS, Linux, or Windows, use Copilot CLI's native
+GitHub-subdirectory installer. Install
+[Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli)
+first if the `copilot` command is not already available:
 
 ```text
 copilot plugin install adammpolak/rulefoundry-plugins:plugins/copilot-rulefoundry
+copilot plugin list
 ```
 
-After the plugin is accepted into the default `awesome-copilot` marketplace:
+Only if a revised submission is later accepted into the default
+`awesome-copilot` marketplace:
 
 ```text
 copilot plugin install rulefoundry-extractions@awesome-copilot

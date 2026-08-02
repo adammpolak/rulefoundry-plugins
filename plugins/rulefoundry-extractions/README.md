@@ -5,9 +5,10 @@ RuleFoundry Extractions is the public RuleFoundry plugin for ChatGPT and Codex. 
 `https://app-api.rulefoundry.com/mcp/plugins`
 
 Marketplace status: **OpenAI version 1.0.0 is published and publicly
-installable** from the [ChatGPT and Codex Plugins
-Directory](https://chatgpt.com/plugins/plugin_asdk_app_6a5cc3a722c08191a8d64f1ef30047d5).
-The direct installation below remains a separate Codex source-install path.
+installable in ChatGPT** from the [public RuleFoundry plugin
+page](https://chatgpt.com/plugins/plugin_asdk_app_6a5cc3a722c08191a8d64f1ef30047d5).
+The direct installation below is the separate Codex source-install path; no
+separate Codex directory approval is claimed.
 
 The plugin can list permitted Extractions, return the RuleFoundry app URL for unfinished sessions, read finalized artifacts, and create one self or external-participant request after immediate confirmation of its exact topic, description, and participant. External participant notification is automatic during creation. A fresh opaque idempotency key makes exact retries safe, while app-equivalent input limits and external-request throttles prevent duplicate or abusive sends. Creating a request does not consume quota. The plugin cannot resend, begin, conduct, resume, complete, modify, or delete a session or artifact.
 

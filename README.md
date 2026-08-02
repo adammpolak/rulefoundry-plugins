@@ -19,24 +19,95 @@ RuleFoundry as part of the single confirmed create action; it is not a separate
 plugin capability.
 
 > **Marketplace status:** RuleFoundry 1.0.0 is published and
-> [publicly installable from the ChatGPT and Codex Plugins
-> Directory](https://chatgpt.com/plugins/plugin_asdk_app_6a5cc3a722c08191a8d64f1ef30047d5).
-> Claude and GitHub Copilot remain under review; Copilot intake passed and
-> [issue #2353](https://github.com/github/awesome-copilot/issues/2353) is ready
-> for maintainer review. A corrected
-> [Cursor Directory submission](https://cursor.directory/plugins/rulefoundry)
-> is in security review and remains hidden. Direct and local test installs
-> below remain separate from provider marketplace listings. See
+> [publicly installable in ChatGPT](https://chatgpt.com/plugins/plugin_asdk_app_6a5cc3a722c08191a8d64f1ef30047d5).
+> Codex uses the separate direct GitHub install documented below; no separate
+> Codex directory approval is claimed.
+> [Cursor Directory](https://cursor.directory/plugins/rulefoundry) is also
+> published with an `Add to Cursor` action, although directory verification is
+> not yet claimed. Claude remains under review. A separate free, offline
+> `expert-logic-to-code` GitHub Copilot community plugin passed intake, but its
+> [marketplace submission was closed without
+> approval](https://github.com/github/awesome-copilot/issues/2353); the
+> connected RuleFoundry package remains a direct install. Direct and local
+> installs below remain separate from provider marketplace listings. See
 > [MARKETPLACE_STATUS.md](MARKETPLACE_STATUS.md).
 
 ## Packages
 
 | Product | Package | Direct/source availability | Vendor marketplace |
 | --- | --- | --- | --- |
-| ChatGPT and Codex | [`rulefoundry-extractions`](plugins/rulefoundry-extractions) | Codex: `codex plugin marketplace add adammpolak/rulefoundry-plugins`, then `codex plugin add rulefoundry-extractions@rulefoundry` | [Published and available](https://chatgpt.com/plugins/plugin_asdk_app_6a5cc3a722c08191a8d64f1ef30047d5) in the OpenAI Plugins Directory |
+| ChatGPT and Codex | [`rulefoundry-extractions`](plugins/rulefoundry-extractions) | Codex: `codex plugin marketplace add adammpolak/rulefoundry-plugins`, then `codex plugin add rulefoundry-extractions@rulefoundry` | [ChatGPT published and available](https://chatgpt.com/plugins/plugin_asdk_app_6a5cc3a722c08191a8d64f1ef30047d5); Codex remains a separate direct source install |
 | Claude Code and Cowork | [`claude-rulefoundry`](plugins/claude-rulefoundry) | `/plugin marketplace add adammpolak/rulefoundry-plugins`, then `/plugin install claude-rulefoundry@rulefoundry` | Submitted 2026-07-20; Anthropic review pending; no public install link |
-| GitHub Copilot CLI and IDE | [`copilot-rulefoundry`](plugins/copilot-rulefoundry) | `copilot plugin install adammpolak/rulefoundry-plugins:plugins/copilot-rulefoundry` | [Submitted; intake passed and ready for maintainer review](https://github.com/github/awesome-copilot/issues/2353); no public marketplace install link |
-| Cursor | [`cursor-rulefoundry`](plugins/cursor-rulefoundry) | Load this package locally for testing | [Corrected submission created 2026-07-28](https://cursor.directory/plugins/rulefoundry); security scan pending; no public install link |
+| GitHub Copilot CLI and IDE | [`copilot-rulefoundry`](plugins/copilot-rulefoundry) | `copilot plugin install adammpolak/rulefoundry-plugins:plugins/copilot-rulefoundry` | Separate offline community plugin [submission closed without approval](https://github.com/github/awesome-copilot/issues/2353); no public marketplace install link |
+| Cursor | [`cursor-rulefoundry`](plugins/cursor-rulefoundry) | Use the Bash or PowerShell installer below for a local source install | [Published and available from Cursor Directory](https://cursor.directory/plugins/rulefoundry); directory verification is not yet claimed |
+
+## Quick install for Cursor, Claude, and GitHub Copilot
+
+Cursor users should normally use the public
+[Cursor Directory listing](https://cursor.directory/plugins/rulefoundry). If
+that route is unavailable, download and inspect the platform installer before
+running it. Both installers fetch the immutable `v1.0.0` package, install it at
+Cursor's supported local-plugin path, and retain the previous install as a
+timestamped backup.
+
+macOS or Linux:
+
+```bash
+curl -fsSLO https://raw.githubusercontent.com/adammpolak/rulefoundry-plugins/main/scripts/install-cursor.sh
+bash install-cursor.sh
+```
+
+Windows PowerShell:
+
+```powershell
+Invoke-WebRequest https://raw.githubusercontent.com/adammpolak/rulefoundry-plugins/main/scripts/install-cursor.ps1 -OutFile install-cursor.ps1
+Unblock-File .\install-cursor.ps1
+.\install-cursor.ps1
+```
+
+Claude Code supports macOS, Linux, and Windows. Install it with Anthropic's
+recommended platform package, then add the pinned RuleFoundry marketplace from
+inside a Claude Code session.
+
+macOS or Linux:
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+Windows PowerShell:
+
+```powershell
+winget install Anthropic.ClaudeCode
+```
+
+All platforms, after running `claude`:
+
+```text
+/plugin marketplace add https://github.com/adammpolak/rulefoundry-plugins.git#v1.0.0
+/plugin install claude-rulefoundry@rulefoundry
+/reload-plugins
+```
+
+For Claude Cowork, open **Customize -> Plugins -> Add marketplace**, enter
+`adammpolak/rulefoundry-plugins`, and install `claude-rulefoundry`. The direct
+marketplace works now; Anthropic's public directory review remains pending.
+
+GitHub Copilot CLI has a native cross-platform repository installer, so no
+wrapper script is needed. If `copilot` is not installed yet, use GitHub's
+[official Copilot CLI installation options](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli)
+first:
+
+```text
+copilot plugin install adammpolak/rulefoundry-plugins:plugins/copilot-rulefoundry
+copilot plugin list
+```
+
+The separate free, offline workflow package can be installed with:
+
+```text
+copilot plugin install adammpolak/rulefoundry-plugins:plugins/expert-logic-to-code
+```
 
 Each client opens the RuleFoundry OAuth flow when authentication is needed. The
 requested scopes are limited to `workspaces:read`, `extractions:read`,
