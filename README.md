@@ -19,9 +19,9 @@ RuleFoundry as part of the single confirmed create action; it is not a separate
 plugin capability.
 
 > **Marketplace status:** RuleFoundry 1.0.0 is published and
-> [publicly installable in ChatGPT](https://chatgpt.com/plugins/plugin_asdk_app_6a5cc3a722c08191a8d64f1ef30047d5).
-> Codex uses the separate direct GitHub install documented below; no separate
-> Codex directory approval is claimed.
+> [publicly installable from the OpenAI Plugins Directory](https://chatgpt.com/plugins/plugin_asdk_app_6a5cc3a722c08191a8d64f1ef30047d5),
+> which OpenAI documents as one universal directory shared by ChatGPT and
+> Codex. The separate direct Codex install documented below remains available.
 > [Cursor Directory](https://cursor.directory/plugins/rulefoundry) is also
 > published with an `Add to Cursor` action, although directory verification is
 > not yet claimed. Claude remains under review. A separate free, offline
@@ -36,7 +36,7 @@ plugin capability.
 
 | Product | Package | Direct/source availability | Vendor marketplace |
 | --- | --- | --- | --- |
-| ChatGPT and Codex | [`rulefoundry-extractions`](plugins/rulefoundry-extractions) | Codex: `codex plugin marketplace add adammpolak/rulefoundry-plugins`, then `codex plugin add rulefoundry-extractions@rulefoundry` | [ChatGPT published and available](https://chatgpt.com/plugins/plugin_asdk_app_6a5cc3a722c08191a8d64f1ef30047d5); Codex remains a separate direct source install |
+| ChatGPT and Codex | [`rulefoundry-extractions`](plugins/rulefoundry-extractions) | Codex direct fallback: `codex plugin marketplace add adammpolak/rulefoundry-plugins`, then `codex plugin add rulefoundry-extractions@rulefoundry` | [Published and available from the shared OpenAI Plugins Directory](https://chatgpt.com/plugins/plugin_asdk_app_6a5cc3a722c08191a8d64f1ef30047d5) |
 | Claude Code and Cowork | [`claude-rulefoundry`](plugins/claude-rulefoundry) | `/plugin marketplace add adammpolak/rulefoundry-plugins`, then `/plugin install claude-rulefoundry@rulefoundry` | Submitted 2026-07-20; Anthropic review pending; no public install link |
 | GitHub Copilot CLI and IDE | [`copilot-rulefoundry`](plugins/copilot-rulefoundry) | `copilot plugin install adammpolak/rulefoundry-plugins:plugins/copilot-rulefoundry` | Separate offline community plugin [submission closed without approval](https://github.com/github/awesome-copilot/issues/2353); no public marketplace install link |
 | Cursor | [`cursor-rulefoundry`](plugins/cursor-rulefoundry) | Use the Bash or PowerShell installer below for a local source install | [Published and available from Cursor Directory](https://cursor.directory/plugins/rulefoundry); directory verification is not yet claimed |
