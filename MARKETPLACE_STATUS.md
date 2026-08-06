@@ -1,11 +1,15 @@
 # RuleFoundry marketplace status
 
-Last verified: **2026-08-02**
+Last verified: **2026-08-06**
 
 The GitHub Copilot plugin was submitted on **2026-07-19**. The ChatGPT and
 Claude plugins were submitted on **2026-07-20**. OpenAI approved RuleFoundry
 version 1.0.0 on **2026-07-21** and the publisher subsequently published it;
 the public RuleFoundry directory page now exposes an `Install plugin` action.
+OpenAI documents that published plugins appear in one universal Plugins
+Directory shared by ChatGPT and Codex, so the same published listing is public
+availability evidence for both products. The tagged Codex source install
+remains a separate direct path.
 Cursor confirmed on **2026-07-21** that the incorrectly attributed application
 would be withdrawn. A corrected submission was created on **2026-07-28** and
 is now published with a public `Add to Cursor` action; directory verification
@@ -22,7 +26,7 @@ marketplace listing.
 
 | Surface | Source/test availability | Submission state | Public listing | Install link |
 | --- | --- | --- | --- | --- |
-| ChatGPT | Codex can install the tagged GitHub package directly as a separate source path | Submitted 2026-07-20; approved 2026-07-21; ChatGPT listing now published | Available in ChatGPT; no separate Codex directory approval claimed | [Install the ChatGPT plugin](https://chatgpt.com/plugins/plugin_asdk_app_6a5cc3a722c08191a8d64f1ef30047d5) |
+| ChatGPT and Codex | Codex can also install the tagged GitHub package directly as a separate source path | Submitted 2026-07-20; approved 2026-07-21; universal listing now published | Available in ChatGPT and Codex | [Install from the OpenAI Plugins Directory](https://chatgpt.com/plugins/plugin_asdk_app_6a5cc3a722c08191a8d64f1ef30047d5) |
 | Claude community marketplace | Claude Code can install the tagged GitHub package directly | Anthropic Console lists two RuleFoundry submissions, both `Submitted and pending review` | Not available | None |
 | GitHub Copilot `awesome-copilot` marketplace | Connected RuleFoundry package remains a direct install; offline community plugin has an immutable public tag | [Submission closed without approval](https://github.com/github/awesome-copilot/issues/2353) 2026-07-28; no `approved` label or generated marketplace PR | Not available | None |
 | Cursor Directory | The Cursor package can be loaded locally or inspected in the public source repository | Published 2026-07-28; directory verification is not yet claimed | Available | [Install RuleFoundry](https://cursor.directory/plugins/rulefoundry) |
@@ -62,8 +66,11 @@ marketplace listing.
   marketplace PR. No public marketplace install path exists.
 - OpenAI: the signed-in portal shows RuleFoundry 1.0.0 as `Published`. The
   [public directory page](https://chatgpt.com/plugins/plugin_asdk_app_6a5cc3a722c08191a8d64f1ef30047d5)
-  exposes `Install plugin` for ChatGPT. Codex remains a separate tagged GitHub
-  source install; no separate Codex directory approval is claimed.
+  exposes `Install plugin`. OpenAI's [public publishing
+  flow](https://developers.openai.com/plugins/deploy/submission#public-publishing-flow)
+  says published plugins appear in the universal Plugins Directory shared by
+  ChatGPT and Codex. The tagged Codex source install remains a separate direct
+  option rather than separate approval evidence.
 - Cursor: in Gmail thread `19f7a48b57b5e4cd`, Cursor confirmed on 2026-07-21
   that the incorrectly attributed submission would be withdrawn. On
   2026-07-28, the publisher created the corrected submission from
