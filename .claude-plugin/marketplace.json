@@ -1,25 +1,30 @@
 {
   "name": "rulefoundry",
-  "description": "Extract business logic",
+  "description": "RuleFoundry plugins: interview the person who knows and build from cited business rules.",
   "owner": {
-    "name": "Vertex Inc.",
+    "name": "RuleFoundry, Inc.",
     "email": "adam@rulefoundry.com"
   },
   "plugins": [
     {
-      "name": "claude-rulefoundry",
+      "name": "rulefoundry",
       "source": "./plugins/claude-rulefoundry",
-      "description": "Extract business logic",
-      "version": "1.0.0",
+      "description": "Get requirements right, fast: interview the person who knows, get cited business rules, and build from them.",
+      "version": "1.1.0",
       "author": {
-        "name": "Vertex Inc.",
+        "name": "RuleFoundry, Inc.",
         "email": "adam@rulefoundry.com"
       },
-      "homepage": "https://rulefoundry.com/integrations",
+      "homepage": "https://rulefoundry.com",
       "repository": "https://github.com/adammpolak/rulefoundry-plugins",
       "license": "Apache-2.0",
       "category": "Productivity",
-      "tags": ["business-logic", "extractions", "mcp"]
+      "tags": [
+        "business-logic",
+        "requirements",
+        "extractions",
+        "mcp"
+      ]
     }
   ]
 }

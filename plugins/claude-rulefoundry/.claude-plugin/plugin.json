@@ -1,23 +1,28 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
-  "name": "claude-rulefoundry",
-  "displayName": "RuleFoundry Extractions",
-  "version": "1.0.0",
-  "description": "Extract business logic",
+  "name": "rulefoundry",
+  "displayName": "RuleFoundry",
+  "version": "1.1.0",
+  "description": "Get requirements right, fast: interview the person who knows, get cited business rules, and build from them.",
   "author": {
-    "name": "Vertex Inc.",
+    "name": "RuleFoundry, Inc.",
     "email": "adam@rulefoundry.com",
     "url": "https://rulefoundry.com"
   },
-  "homepage": "https://rulefoundry.com/integrations",
+  "homepage": "https://rulefoundry.com",
+  "privacyPolicyUrl": "https://rulefoundry.com/privacy",
+  "icon": "./.claude-plugin/icon.png",
   "repository": "https://github.com/adammpolak/rulefoundry-plugins",
   "license": "Apache-2.0",
   "keywords": [
-    "rulefoundry",
-    "mcp",
-    "extractions",
     "business-logic",
-    "artifacts"
+    "requirements",
+    "business-rules",
+    "sop",
+    "process-documentation",
+    "knowledge-transfer",
+    "expert-interview",
+    "extractions"
   ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json"
