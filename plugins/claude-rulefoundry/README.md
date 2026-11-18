@@ -9,8 +9,7 @@ said, and anything still unconfirmed stays an open question instead of a guess.
 This plugin brings RuleFoundry into Claude (chat, Cowork and Claude Code):
 
 - **Interview me.** Give a topic, such as how you approve refunds. RuleFoundry prepares the
-  request, asks you once, and opens the interview beside the chat: talk it through by voice, or
-  type where the microphone isn't available, and watch the rules appear.
+  request, asks you once, and gives you the interview to open in RuleFoundry and talk through.
 - **Ask someone else.** Say who and what to cover; RuleFoundry emails them and runs the interview,
   and tells you if the email didn't get through.
 - **See your Extractions.** In Claude chat the RuleFoundry library opens as an interactive card.
@@ -21,9 +20,7 @@ This plugin brings RuleFoundry into Claude (chat, Cowork and Claude Code):
 ## What it connects to
 
 The plugin contains skills (instructions) and one remote MCP server reference. It runs no local
-code. It connects to RuleFoundry's own MCP server over HTTPS (the interview beside the chat also
-talks to the same RuleFoundry API and its voice connection directly, and uses your microphone
-only once you start talking):
+code. It connects to RuleFoundry's own MCP server over HTTPS:
 
 `https://app-api.rulefoundry.com/mcp/plugins`
 
