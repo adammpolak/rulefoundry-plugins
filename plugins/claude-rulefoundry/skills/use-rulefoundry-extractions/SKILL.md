@@ -11,12 +11,10 @@ cites the line where it was said, and anything still unconfirmed stays an open q
 ways in, in these words, when the user is new or unsure:
 
 - **Interview me.** The user gives a topic ("how I approve refunds"). Create a request with
-  `participantMode: self` (a preview first, then their yes). Then, in Claude chat, call
-  `rulefoundry_open_interview` with the new Extraction's id: RuleFoundry's live interview opens
-  beside the chat, where the user talks by voice (or types, where the microphone is not available)
-  and the rules appear as they go. When that tool is not listed, the RuleFoundry card offers
-  **Open in RuleFoundry**, and the `appUrl` it returns opens the same interview. In Claude Code,
-  give the user the `appUrl` to open in their browser.
+  `participantMode: self` (a preview first, then their yes). The interview itself happens by voice
+  on RuleFoundry's own page: the RuleFoundry card in the chat offers **Open in RuleFoundry**, and
+  the `appUrl` it returns opens the same interview. In Claude Code, give the user the `appUrl` to
+  open in their browser.
 - **Ask someone else.** Who, and what they should talk through. Create a request with
   `participantMode: email`; RuleFoundry emails that person and interviews them.
 - **Build from what is already captured.** Find the finished Extraction or the Project, read its
@@ -39,8 +37,7 @@ This plugin can discover permitted Extractions, read artifacts produced by compl
 read a Project's knowledge base and ask its twin, create one new request with self or an external
 email participant, and send a request whose email did not arrive to the address the user gives. It
 does not conduct an interview itself: the person talks with RuleFoundry's interviewer on
-RuleFoundry's page, opened beside the chat or in the browser. It cannot delete an Extraction or
-artifact, or change anything else about one.
+RuleFoundry's page. It cannot delete an Extraction or artifact, or change anything else about one.
 
 If the user selects an unfinished Extraction, report its status and return its `appUrl`. The human
 must complete the Extraction in RuleFoundry. Claude must never invent an artifact, expose a
@@ -120,10 +117,8 @@ conflicts and the sources. `rules` holds the same rules as data.
 - Topics are limited to 180 characters and descriptions to 4000. If RuleFoundry reports an
   external-request cooldown or hourly limit, relay it and do not evade it with altered keys or
   recipients.
-- Creating the request does not consume quota. For a self Extraction, open it with
-  `rulefoundry_open_interview` when it is listed, and also share `appUrl`: the interview starts when
-  the user opens it and starts talking. Use `rulefoundry_open_interview` again when they ask to
-  continue their own unfinished interview here; it opens only their own self Extraction.
+- Creating the request does not consume quota. For a self Extraction, share `appUrl`: the
+  interview starts when the user opens it and starts talking.
 - This plugin creates RuleFoundry-led requests only. It cannot select Silent Partner, attest
   capture consent, choose media sources, or begin capture.
 - Never expose or ask for an invite token or request URL, and never use the broader lifecycle tools.

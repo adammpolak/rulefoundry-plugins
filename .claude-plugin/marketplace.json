@@ -10,7 +10,7 @@
       "name": "rulefoundry",
       "source": "./plugins/claude-rulefoundry",
       "description": "Get requirements right, fast: interview the person who knows, get cited business rules, and build from them.",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "RuleFoundry, Inc.",
         "email": "adam@rulefoundry.com"
