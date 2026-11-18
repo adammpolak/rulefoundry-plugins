@@ -24,7 +24,8 @@ plugin capability.
 > Codex directory approval is claimed.
 > [Cursor Directory](https://cursor.directory/plugins/rulefoundry) is also
 > published with an `Add to Cursor` action, although directory verification is
-> not yet claimed. Claude remains under review. A separate free, offline
+> not yet claimed. Claude is being resubmitted through Anthropic's current
+> developer portal. A separate free, offline
 > `expert-logic-to-code` GitHub Copilot community plugin passed intake, but its
 > [marketplace submission was closed without
 > approval](https://github.com/github/awesome-copilot/issues/2353); the
@@ -37,7 +38,7 @@ plugin capability.
 | Product | Package | Direct/source availability | Vendor marketplace |
 | --- | --- | --- | --- |
 | ChatGPT and Codex | [`rulefoundry-extractions`](plugins/rulefoundry-extractions) | Codex: `codex plugin marketplace add adammpolak/rulefoundry-plugins`, then `codex plugin add rulefoundry-extractions@rulefoundry` | [ChatGPT published and available](https://chatgpt.com/plugins/plugin_asdk_app_6a5cc3a722c08191a8d64f1ef30047d5); Codex remains a separate direct source install |
-| Claude Code and Cowork | [`claude-rulefoundry`](plugins/claude-rulefoundry) | `/plugin marketplace add adammpolak/rulefoundry-plugins`, then `/plugin install claude-rulefoundry@rulefoundry` | Submitted 2026-07-20; Anthropic review pending; no public install link |
+| Claude (chat, Cowork and Claude Code) | [`rulefoundry`](plugins/claude-rulefoundry) | `/plugin marketplace add adammpolak/rulefoundry-plugins`, then `/plugin install rulefoundry@rulefoundry` | Being resubmitted through Anthropic's developer portal (claude.ai/directory/manage); no public install link yet |
 | GitHub Copilot CLI and IDE | [`copilot-rulefoundry`](plugins/copilot-rulefoundry) | `copilot plugin install adammpolak/rulefoundry-plugins:plugins/copilot-rulefoundry` | Separate offline community plugin [submission closed without approval](https://github.com/github/awesome-copilot/issues/2353); no public marketplace install link |
 | Cursor | [`cursor-rulefoundry`](plugins/cursor-rulefoundry) | Use the Bash or PowerShell installer below for a local source install | [Published and available from Cursor Directory](https://cursor.directory/plugins/rulefoundry); directory verification is not yet claimed |
 

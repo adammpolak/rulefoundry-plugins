@@ -1,109 +1,57 @@
-# RuleFoundry Extractions for Claude
+# RuleFoundry for Claude
 
-Marketplace status: **submitted 2026-07-20; Anthropic review pending**. Direct
-GitHub installation is available now, but RuleFoundry is not yet listed in
-Anthropic's public plugin directory.
+Get clear, accurate requirements from the people who know, in one conversation instead of rounds
+of meetings, notes and follow-ups. RuleFoundry interviews your expert the way an experienced
+consultant would: it asks the next useful question, pins down vague terms like "usually" or "large
+order", and follows the exceptions until the rules are clear. Every rule links to where it was
+said, and anything still unconfirmed stays an open question instead of a guess.
 
-This public Apache-2.0 package connects
-Claude Code and Cowork to RuleFoundry's production Streamable HTTP MCP plugin
-resource:
+This plugin brings RuleFoundry into Claude (chat, Cowork and Claude Code):
+
+- **Interview me.** Give a topic, such as how you approve refunds. RuleFoundry prepares the
+  request, asks you once, and opens the interview beside the chat: talk it through by voice, or
+  type where the microphone isn't available, and watch the rules appear.
+- **Ask someone else.** Say who and what to cover; RuleFoundry emails them and runs the interview,
+  and tells you if the email didn't get through.
+- **See your Extractions.** In Claude chat the RuleFoundry library opens as an interactive card.
+- **Build from it.** In Claude Code, read a Project's cited rules and implement, test or review code
+  against them, with rule IDs next to the code, and send an Extraction for any open question
+  instead of guessing.
+
+## What it connects to
+
+The plugin contains skills (instructions) and one remote MCP server reference. It runs no local
+code. It connects to RuleFoundry's own MCP server over HTTPS (the interview beside the chat also
+talks to the same RuleFoundry API and its voice connection directly, and uses your microphone
+only once you start talking):
 
 `https://app-api.rulefoundry.com/mcp/plugins`
 
-It can list accessible and assigned Extractions, show live status and RuleFoundry
-app links, read engine-produced artifacts from completed Extractions, and create
-one self or external-participant request after immediate confirmation. It cannot
-resend, begin, conduct, resume, complete, modify, or delete an Extraction or
-artifact. RuleFoundry sends the external notification automatically in that
-single create action, and request creation does not consume quota. The Extraction
-session itself remains in the RuleFoundry app. Exact retries reuse an opaque
-idempotency key and cannot send a second email; app-equivalent input bounds and
-per-user/recipient throttles apply.
+You sign in to RuleFoundry with OAuth (PKCE) and approve four scopes: `workspaces:read`,
+`extractions:read`, `extractions:write` and `artifacts:read`. Claude stores the token; the plugin
+stores nothing. The server returns only what your RuleFoundry account can access: Extraction
+titles, status and links, the business logic of finished Extractions, and a Project's knowledge
+base. It never returns raw transcripts, passwords or billing data. Creating an Extraction request
+always asks you first; a request for someone else sends them one RuleFoundry email. Nothing is
+deleted or changed by the plugin.
 
-## Install on Claude Code and Cowork
+## Install
 
-Claude Code supports macOS, Linux, and Windows. Install it with Anthropic's
-recommended platform package if `claude` is not already available.
-
-macOS or Linux:
-
-```bash
-curl -fsSL https://claude.ai/install.sh | bash
-```
-
-Windows PowerShell:
-
-```powershell
-winget install Anthropic.ClaudeCode
-```
-
-Start Claude Code with `claude`, then run:
+In Claude, add RuleFoundry from the directory (**Customize > Plugins**), or in Claude Code:
 
 ```text
-/plugin marketplace add https://github.com/adammpolak/rulefoundry-plugins.git#v1.0.0
-/plugin install claude-rulefoundry@rulefoundry
-/reload-plugins
+/plugin marketplace add adammpolak/rulefoundry-plugins
+/plugin install rulefoundry@rulefoundry
 ```
 
-For Claude Cowork, open **Customize -> Plugins -> Add marketplace**, enter
-`adammpolak/rulefoundry-plugins`, and install `claude-rulefoundry`. Cowork
-prompts for RuleFoundry authentication when it enables the bundled connector.
-
-These direct paths are separate from Anthropic's public directory review.
-See Anthropic's official [Claude Code setup](https://code.claude.com/docs/en/getting-started),
-[plugin marketplace](https://code.claude.com/docs/en/discover-plugins), and
-[Cowork plugin](https://claude.com/docs/cowork/guide/plugins) documentation.
-
-## Test locally
-
-From this repository root:
-
-```bash
-claude plugin validate plugins/claude-rulefoundry
-claude --plugin-dir ./plugins/claude-rulefoundry
-```
-
-In Claude Code, run `/mcp`. Approve the plugin-provided `rulefoundry` server,
-choose authentication, sign in to RuleFoundry in the browser, and consent to the
-four plugin scopes: `workspaces:read`, `extractions:read`, `extractions:write`,
-and `artifacts:read`. Then run `/reload-plugins` or start a fresh session if the MCP
-server was enabled after startup.
-
-After Anthropic accepts the submission into the community marketplace, users
-can instead install it with:
-
-```text
-/plugin install claude-rulefoundry@claude-plugins-official
-```
-
-No bearer token, OAuth client secret, or reviewer credential belongs in the
-plugin or `.mcp.json`.
+Then run `/mcp`, choose the `rulefoundry` server and sign in to RuleFoundry in the browser.
 
 ## Try it
 
-- `List the Extractions I can access. Separate workspace Extractions from ones assigned to me.`
-- `Find completed Extractions about approval rules and show the available artifacts.`
-- `Use the completed artifact I select as context for this implementation plan and cite its URI.`
-- `Show the unfinished Extraction I select with its status and app link only. Do not continue it or use it as source truth.`
-- `Create an Extraction request for missing approval logic with me as the participant.` (must confirm exact values immediately before creation)
+- `Interview me about how I decide which customer refunds to approve.`
+- `Send an Extraction to my colleague about how she closes the books each month.`
+- `Open my RuleFoundry library.`
+- `Read the refund rules from my RuleFoundry Project and implement them in the returns service, with a test per rule.`
 
-The server exposes six read tools plus one confirmed request-creation tool:
-
-- `rulefoundry_list_workspaces`
-- `rulefoundry_list_extractions`
-- `rulefoundry_get_extraction`
-- `rulefoundry_search_extractions`
-- `rulefoundry_list_artifacts`
-- `rulefoundry_read_artifact`
-- `rulefoundry_create_extraction_request`
-
-## Claude surfaces
-
-The Plugin Directory submission covers Claude Code and Claude Cowork. The
-plugin uses the same OAuth resource and server-enforced boundary on both
-surfaces; directory acceptance does not add session-lifecycle or
-artifact-mutation capability.
-
-Support: [adam@rulefoundry.com](mailto:adam@rulefoundry.com)
-Privacy: <https://rulefoundry.com/privacy>
-Terms: <https://rulefoundry.com/terms>
+Support: [adam@rulefoundry.com](mailto:adam@rulefoundry.com) ·
+Privacy: <https://rulefoundry.com/privacy> · Terms: <https://rulefoundry.com/terms>
