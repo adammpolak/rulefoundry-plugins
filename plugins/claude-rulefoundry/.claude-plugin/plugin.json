@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "rulefoundry",
   "displayName": "RuleFoundry",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Get requirements right, fast: interview the person who knows, get cited business rules, and build from them.",
   "author": {
     "name": "RuleFoundry, Inc.",
