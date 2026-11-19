@@ -1,13 +1,15 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.adammpolak/rulefoundry-extractions",
-  "title": "RuleFoundry Extractions",
-  "description": "Extract business logic",
+  "title": "RuleFoundry",
+  "description": "Interview the person who knows, or read a screen recording, and get business rules with sources.",
+  "websiteUrl": "https://rulefoundry.com",
   "repository": {
     "url": "https://github.com/adammpolak/rulefoundry-plugins",
-    "source": "github"
+    "source": "github",
+    "subfolder": "plugins/copilot-rulefoundry"
   },
-  "version": "1.0.0",
+  "version": "1.4.1",
   "remotes": [
     {
       "type": "streamable-http",
