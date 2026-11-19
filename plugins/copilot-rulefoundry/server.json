@@ -4,12 +4,21 @@
   "title": "RuleFoundry",
   "description": "Interview the person who knows, or read a screen recording, and get business rules with sources.",
   "websiteUrl": "https://rulefoundry.com",
+  "icons": [
+    {
+      "src": "https://rulefoundry.com/images/rulefoundry-logo-main.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
   "repository": {
     "url": "https://github.com/adammpolak/rulefoundry-plugins",
     "source": "github",
     "subfolder": "plugins/copilot-rulefoundry"
   },
-  "version": "1.4.1",
+  "version": "1.4.2",
   "remotes": [
     {
       "type": "streamable-http",
