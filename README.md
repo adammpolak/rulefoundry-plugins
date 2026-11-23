@@ -1,5 +1,16 @@
 # RuleFoundry Plugins
 
+Give Claude Code, Cursor, Codex, GitHub Copilot or ChatGPT the business rules
+your experts know, each linked to where it was said. RuleFoundry interviews the
+person who knows a process, by voice or text, or reads a narrated screen
+recording, and writes the rules in plain language with open questions kept
+apart. These plugins let your assistant search and read those finished rules,
+or send someone an interview request after you confirm it.
+
+- What RuleFoundry is, its limits and prices: https://rulefoundry.com/facts
+- How to give coding agents your business rules:
+  https://rulefoundry.com/business-rules-for-coding-agents
+
 Official open-source plugins for using RuleFoundry Extractions and completed
 artifacts from AI assistants. The packages connect to RuleFoundry's production
 OAuth-protected Streamable HTTP MCP resource:
